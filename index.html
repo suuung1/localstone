@@ -26,6 +26,7 @@
     <link rel="canonical" href="https://localstone.vercel.app/" />
 
     <link rel="stylesheet" href="https://localstone.vercel.app/style.css">
+    
     <link rel="icon" type="image/svg+xml" href="https://localstone.vercel.app/icon.svg" />
 
     <title>Localstone</title>
@@ -39,6 +40,20 @@
         <a href="https://gemini.google.com/" class="nav__item anchor">Gemini</a>
       </nav>
     </header>
+
+    <main class="main">
+      <div class="main__container">
+        <div class="flex">
+          <button class="btn fs-3 btn-new">New</button>
+          <button class="btn fs-3 btn-trash">Trash</button>
+          <button class="btn fs-3 btn-rotate">Rotate</button>
+        </div>
+        
+        <h2>A new document</h2>
+        
+        <textarea class="textarea fs-3"></textarea>
+      </div>
+    </main>
 
     <script type="module" src="/src/main.ts"></script>
   </body>
