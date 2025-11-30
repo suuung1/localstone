@@ -1,0 +1,304 @@
+/* ==== Body */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* ==== Nav */
+.nav {
+    margin: 1rem;
+    padding: 2rem;
+
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1rem;
+
+    border-bottom: 2px solid black;
+}
+
+.nav__brand {
+    color: black;
+    text-decoration: none;
+
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    user-select: none;
+}
+
+.nav__container {
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    gap: 0;
+}
+
+.nav__item {
+    font-style: italic;
+}
+
+.nav__item--active {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ==== Main */
+.main {
+    margin: 1rem 0 2rem 0;
+    padding: 0;
+}
+
+.main__container {
+    width: 90vw;
+    margin: auto;
+}
+
+/* ==== Footer */
+.footer {
+    margin: 1rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    border-top: 2px solid black;
+
+    gap: 1rem;
+}
+
+.footer__container {
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0;
+}
+
+.footer__brand {
+    color: black;
+    text-decoration: none;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    user-select: none;
+}
+
+.footer__table {
+    border-collapse: separate;
+    border-spacing: 16px 8px;
+}
+
+.footer__th {
+    padding: 0 1rem 1rem 1rem;
+    margin: 0 1rem 0 1rem;
+
+    border-bottom: black solid 2px;
+
+    font-weight: bold;
+}
+
+.footer__td {
+    padding: 1rem 1rem 0 1rem;
+    margin: 0 1rem 0 1rem;
+}
+
+.footer__info {
+    text-align: center;
+}
+
+/* ==== Anchor */
+.anchor {
+    color: black;
+    text-decoration: none;
+}
+
+.anchor:hover {
+    text-decoration: underline;
+    text-decoration-color: tomato;
+}
+
+/* ==== Button */
+.btn {
+    display: block;
+
+    margin: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
+
+    background-color: white;
+    color: black;
+
+    border: 2px solid black;
+
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    text-decoration: underline;
+    text-decoration-color: tomato;
+}
+
+/* ==== Card */
+.card {
+    display: block;
+
+    padding: 1rem;
+    border: 2px solid black;
+}
+
+.card__title {
+    margin: 0 0 1rem 0;
+    padding: 0 0 1rem 0;
+
+    border-bottom: 2px solid black;
+}
+
+.card__list {
+    margin: 0;
+    
+    list-style: circle;
+}
+
+.card__item {
+    margin-bottom: 1rem;
+}
+
+/* ==== Alert */
+.alert {
+    margin: 1rem;
+    padding: 1rem;
+
+    color: tomato;
+    border: 2px solid tomato;
+}
+
+/* ==== Flex */
+.flex {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ==== Grid */
+.grid {
+    display: grid;
+
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    align-items: center;
+}
+
+/* ==== Code */
+.code {
+    display: block;
+
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 1rem;
+    
+    line-height: 1.5;
+    color: black;
+    background-color: whitesmoke;
+
+    overflow-x: auto;
+}
+
+/* ==== Blockquote */
+.blockquote {
+    margin: 2rem 1rem 2rem 1rem;
+    padding-left: 1rem;
+    
+    border-left: 8px solid black;
+    
+    font-size: inherit;
+    font-style: italic;
+}
+
+/* ==== Font */
+.fs-1 {
+    font-size: 2rem;
+}
+
+.fs-2 {
+    font-size: 1.5rem;
+}
+
+.fs-3 {
+    font-size: 1.2rem;
+}
+
+.f-b {
+    font-weight: bold;
+}
+
+.f-i {
+    font-style: italic;
+}
+
+/* ==== Tablet and Desktop */
+@media screen and (min-width: 700px) {
+    /* ==== Nav */
+    .nav {
+        flex-direction: row;
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 1rem;
+    }
+
+    .nav__brand {
+        font-size: 2rem;
+    }
+
+    .nav__container {
+        flex-direction: row;
+        justify-content: space-around;
+
+        gap: 1rem;
+    }
+
+    /* ==== Main */
+    .main__container {
+        width: 65vw;
+    }
+
+    /* ==== Footer */
+    .footer__container {
+        flex-direction: row;
+        align-items: flex-start;
+
+        gap: 0;
+        
+        justify-content: space-around;
+    }
+}
+
+/* ==== Only In Tablet */
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ==== Only In Desktop */
+@media screen and (min-width: 1200px) {
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

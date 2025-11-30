@@ -25,12 +25,21 @@
     
     <link rel="canonical" href="https://localstone.vercel.app/" />
 
+    <link rel="stylesheet" href="https://localstone.vercel.app/style.css">
     <link rel="icon" type="image/svg+xml" href="https://localstone.vercel.app/icon.svg" />
 
     <title>Localstone</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header class="nav">
+      <a href="https://localstone.vercel.app/" class="nav__brand">Localstone</a>
+      
+      <nav class="nav__container">
+        <a href="https://www.google.com/" class="nav__item anchor">Google</a>
+        <a href="https://gemini.google.com/" class="nav__item anchor">Gemini</a>
+      </nav>
+    </header>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
