@@ -1,19 +1,17 @@
-export class Note {
-    id: number
-    name: string
-    data: string
+export type NoteId = number
+export type NoteName = string
+export type NoteData = string
 
-    constructor(id: number, name: string, data: string) {
+export class Note {
+    id: NoteId
+    name: NoteName
+    data: NoteData
+
+    constructor(id: NoteId, name: NoteName, data: NoteData) {
         this.id = id
         this.name = name
         this.data = data
     }
 }
 
-export class NoteBundle {
-    notes: Note[]
-
-    constructor(notes: Note[]) {
-        this.notes = notes
-    }
-}
+export type NoteBundle = Note[]
