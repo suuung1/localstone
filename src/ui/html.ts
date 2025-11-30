@@ -1,4 +1,4 @@
-import type { NewBtnClickedCallback, RotateBtnClickedCallback, TrashBtnClickedCallback, UIManager } from "./ui";
+import type { NewBtnClickedCallback, RotateBtnClickedCallback, SubheadData, TextfieldData, TrashBtnClickedCallback, UIManager } from "./ui";
 
 export class HTMLUIManager implements UIManager {
     private new_btn: HTMLButtonElement
@@ -44,15 +44,15 @@ export class HTMLUIManager implements UIManager {
         this.textarea.value = ""
     }
 
-    ReadTextfield(): string {
+    ReadTextfield(): TextfieldData {
         return this.textarea.value
     }
 
-    UpdateTextfield(data: string): void {
+    UpdateTextfield(data: TextfieldData): void {
         this.textarea.value = data
     }
 
-    UpdateSubhead(data: string): void {
+    UpdateSubhead(data: SubheadData): void {
         this.subhead.textContent = data
     }
 }

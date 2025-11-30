@@ -1,6 +1,12 @@
-export type NewBtnClickedCallback = (name: string) => void
+import type { NoteName } from "../model/note"
+
+export type NewBtnClickedCallback = (name: NoteName) => void
 export type TrashBtnClickedCallback = () => void
 export type RotateBtnClickedCallback = () => void
+
+export type TextfieldData = string
+
+export type SubheadData = string
 
 export interface UIManager {
     OnClickNewBtn(callback: NewBtnClickedCallback): void
@@ -8,8 +14,8 @@ export interface UIManager {
     OnClickRotateBtn(callback: RotateBtnClickedCallback): void
 
     CleanTextfield(): void
-    ReadTextfield(): string
-    UpdateTextfield(data: string): void
+    ReadTextfield(): TextfieldData
+    UpdateTextfield(data: TextfieldData): void
 
-    UpdateSubhead(data: string): void
+    UpdateSubhead(data: SubheadData): void
 }
