@@ -16,6 +16,9 @@ export interface UIManager {
     CleanTextfield(): void
     ReadTextfield(): TextfieldData
     UpdateTextfield(data: TextfieldData): void
+    ActiveTextfield(): void
+    DeactiveTextfield(): void
 
+    ReadSubhead(): SubheadData
     UpdateSubhead(data: SubheadData): void
 }

@@ -5,8 +5,12 @@ export class LocalStorageNoteStore implements NoteStore {
     private CreateRandomId() {
         const timestamp = Date.now()
         const suffix = Math.floor(Math.random() * 1000).toString().padStart(3, '0')
-
+        
         return parseInt(String(timestamp) + String(suffix))
+    }
+
+    ReadNoteCount(): number {
+        return localStorage.length
     }
 
     CreateNote(name: NoteName, data: NoteData): Note {
@@ -16,6 +20,29 @@ export class LocalStorageNoteStore implements NoteStore {
         localStorage.setItem(id.toString(), json)
 
         return new Note(id, name, data)
+    }
+
+    private counter = 0
+
+    ReadNextNote(): Note {
+        const size = localStorage.length
+
+        if (this.counter >= size) {
+            this.counter = 0
+        }
+
+        const i = this.counter
+
+        const key = localStorage.key(i) as string
+        const data = JSON.parse(localStorage.getItem(key) as string)
+
+        const note_id = parseInt(key)
+        const note_name = data['name']
+        const note_data = data['data']
+
+        this.counter++
+        
+        return new Note(note_id, note_name, note_data)
     }
 
     ReadEveryNote(): NoteBundle {

@@ -48,8 +48,26 @@ export class HTMLUIManager implements UIManager {
         return this.textarea.value
     }
 
+    ActiveTextfield() {
+        this.textarea.disabled = false
+    }
+
+    DeactiveTextfield() {
+        this.textarea.disabled = true
+    }
+
     UpdateTextfield(data: TextfieldData): void {
         this.textarea.value = data
+    }
+
+    ReadSubhead(): SubheadData {
+        const text_or_null = this.subhead.textContent
+
+        if (text_or_null === null) {
+            return ""
+        }
+
+        return text_or_null
     }
 
     UpdateSubhead(data: SubheadData): void {
